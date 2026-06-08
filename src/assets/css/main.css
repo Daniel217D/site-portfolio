@@ -1,0 +1,139 @@
+:root {
+  --color-ink: #17201a;
+  --color-muted: #667267;
+  --color-paper: #f7f2e8;
+  --color-surface: #fffaf0;
+  --color-line: #d8cebd;
+  --color-accent: #0f7b63;
+  --color-accent-strong: #0a5747;
+  --color-warm: #c45f35;
+  --shadow-soft: 0 18px 60px rgb(43 37 28 / 12%);
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgb(15 123 99 / 12%), transparent 34%),
+    linear-gradient(225deg, rgb(196 95 53 / 12%), transparent 38%),
+    var(--color-paper);
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--color-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.headline {
+  margin: 0;
+  max-width: 760px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.lead {
+  max-width: 680px;
+  color: var(--color-muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--color-ink);
+  border-radius: 6px;
+  background: var(--color-ink);
+  color: var(--color-surface);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-link.secondary {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.project-card {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: rgb(255 250 240 / 78%);
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+}
+
+.project-card h2,
+.project-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+@media (width >= 760px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+

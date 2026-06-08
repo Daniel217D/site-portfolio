@@ -8,6 +8,16 @@ Draft v0.1
 
 # Обязательные проверки
 
+Проверки по умолчанию выполняются в Docker.
+
+Рекомендуемый способ запуска полного набора проверок:
+
+```bash
+docker compose run --rm app npm run check
+```
+
+Локальные команды ниже должны оставаться доступными как дополнительный режим разработки.
+
 ## TypeScript
 
 ```bash
@@ -58,7 +68,7 @@ npm run test:e2e
   "preview": "nuxt preview",
   "typecheck": "nuxt typecheck",
   "lint": "eslint .",
-  "test:unit": "vitest",
+  "test:unit": "vitest run",
   "test:e2e": "playwright test",
   "check": "npm run typecheck && npm run lint && npm run test:unit && npm run generate"
 }
@@ -77,4 +87,3 @@ npm run test:e2e
 * проходят unit-тесты;
 * выполняется статическая сборка;
 * обновлён README при необходимости.
-
