@@ -68,7 +68,7 @@ npm run test:e2e
   "preview": "nuxt preview",
   "typecheck": "nuxt typecheck",
   "lint": "eslint .",
-  "test:unit": "vitest",
+  "test:unit": "vitest run",
   "test:e2e": "playwright test",
   "check": "npm run typecheck && npm run lint && npm run test:unit && npm run generate"
 }
